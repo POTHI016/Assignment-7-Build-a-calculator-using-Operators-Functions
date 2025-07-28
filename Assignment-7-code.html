@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <label>Number 1:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Number 2:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <br><br>
+    <button onclick="square()">Square (Number 1)</button>
+    <button onclick="cube()">Cube (Number 1)</button>
+
+    <p id="result"></p>
+
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = "Result: " + (a + b);
+        }
+
+        function subtract() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = "Result: " + (a - b);
+        }
+
+        function multiply() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = "Result: " + (a * b);
+        }
+
+        function divide() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            if (b !== 0) {
+                document.getElementById("result").innerText = "Result: " + (a / b);
+            } else {
+                document.getElementById("result").innerText = "Cannot divide by zero.";
+            }
+        }
+
+        function square() {
+            let a = Number(document.getElementById("num1").value);
+            document.getElementById("result").innerText = "Square: " + (a * a);
+        }
+
+        function cube() {
+            let a = Number(document.getElementById("num1").value);
+            document.getElementById("result").innerText = "Cube: " + (a * a * a);
+        }
+    </script>
+
+</body>
+</html>
